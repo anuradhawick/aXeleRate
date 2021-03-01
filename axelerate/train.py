@@ -8,6 +8,10 @@ import sys
 import json
 import matplotlib
 
+# adding to PYTHONPATH
+module_location = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(module_location)
+
 from axelerate.networks.yolo.frontend import create_yolo, get_object_labels
 from axelerate.networks.classifier.frontend_classifier import create_classifier, get_labels
 from axelerate.networks.segnet.frontend_segnet import create_segnet

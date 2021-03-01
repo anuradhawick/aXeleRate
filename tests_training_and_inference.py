@@ -1,5 +1,11 @@
 import argparse
 import json
+import sys
+
+# adding to PYTHONPATH
+module_location = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(module_location)
+
 from axelerate import setup_training, setup_evaluation
 import tensorflow.keras.backend as K
 from termcolor import colored

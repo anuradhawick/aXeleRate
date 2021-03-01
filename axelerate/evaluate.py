@@ -7,6 +7,11 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 from tensorflow.keras import backend as K 
+
+# adding to PYTHONPATH
+module_location = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(module_location)
+
 from axelerate.networks.yolo.frontend import create_yolo
 from axelerate.networks.yolo.backend.utils.box import draw_boxes
 from axelerate.networks.yolo.backend.utils.annotation import parse_annotation
